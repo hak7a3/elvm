@@ -69,7 +69,7 @@ static void tex_emit_inst(Inst* inst) {
 
   case GETC:
     // input is also...
-    emit_line("\\read-1to\\@temp\\count0=\\@temp\\edef\\@reg@%s{\\the\\count0}%", reg_names[inst->dst.reg]);
+    emit_line("\\read-1to\\@temp\\count0=\\@temp\\edef\\@reg@%s{\\the\\count0}%%", reg_names[inst->dst.reg]);
     break;
 
   case EXIT:
